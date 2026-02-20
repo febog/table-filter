@@ -1,0 +1,24 @@
+{
+  "name": "@febog/table-filter",
+  "version": "0.0.1",
+  "description": "A minimal way to filter HTML table rows.",
+  "keywords": [
+    "javascript",
+    "html",
+    "npm"
+  ],
+  "homepage": "https://github.com/febog/table-filter#readme",
+  "bugs": {
+    "url": "https://github.com/febog/table-filter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/febog/table-filter.git"
+  },
+  "license": "MIT",
+  "author": "Felipe Bojorquez",
+  "main": "table-filter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
