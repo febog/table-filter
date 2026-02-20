@@ -1,6 +1,6 @@
 {
   "name": "@febog/table-filter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A minimal way to filter HTML table rows.",
   "keywords": [
     "javascript",
