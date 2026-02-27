@@ -1,6 +1,6 @@
 ## Demo
 
-Demo for [table-filter](https://www.npmjs.com/package/@febog/table-filter). Try filtering the table below.
+Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm package](https://www.npmjs.com/package/@febog/table-filter) for filtering an HTML table with source code [available on GitHub](https://github.com/febog/table-filter). Try filtering the table below.
 
 <search>
   <form style="padding: 0 0 1rem 0">
