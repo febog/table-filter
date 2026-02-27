@@ -3,7 +3,7 @@
 Demo for [table-filter](https://www.npmjs.com/package/@febog/table-filter). Try filtering the table below.
 
 <search>
-  <form>
+  <form style="padding: 0 0 1rem 0">
     <div>
       <label for="table-search-input">Search:</label>
     </div>
