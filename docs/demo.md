@@ -52,3 +52,5 @@ Demo for [table-filter](https://www.npmjs.com/package/@febog/table-filter). Try 
 </table>
 
 <script src="https://cdn.jsdelivr.net/npm/@febog/table-filter@0.1.0/table-filter.js" defer></script>
+
+Go back to the [homepage](../).

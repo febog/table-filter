@@ -34,3 +34,7 @@ The `filterTable(tableId, searchInputId, counterId)` function requires the ID of
 - `tableId`: Id of the `<table>` element to filter.
 - `searchInputId`: Id of the search `<input>` element containing the query to filter for.
 - `counterId`: Id of an element for displaying the number of visible rows after filtering, for example a `<span>`.
+
+## Working example
+
+You can see it in action at the [demo website](https://febog.github.io/table-filter/demo).
