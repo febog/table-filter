@@ -13,7 +13,7 @@ Demo for [table-filter](https://www.npmjs.com/package/@febog/table-filter). Try 
   </form>
 </search>
 
-<table id="search-table">
+<table id="search-table" style="width: 100%;">
   <caption>Showing <span id="visible-items-count">5</span> items of 5.</caption>
   <thead>
     <tr>
