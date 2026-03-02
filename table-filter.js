@@ -48,3 +48,5 @@ function textContainsEveryTerm(text, terms) {
   }
   return true;
 }
+
+export { filterTable };
