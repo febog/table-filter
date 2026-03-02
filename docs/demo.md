@@ -8,7 +8,7 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
       <label for="table-search-input">Search:</label>
     </div>
     <div>
-      <input type="search" id="table-search-input" placeholder="Filter the table..." oninput="filterTable('search-table', 'table-search-input', 'visible-items-count')">
+      <input type="search" id="table-search-input" placeholder="Filter the table...">
     </div>
   </form>
 </search>
@@ -51,7 +51,11 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
   </tbody>
 </table>
 
-<script src="https://cdn.jsdelivr.net/npm/@febog/table-filter@0.1.0/table-filter.js" defer></script>
+<script type="module">
+  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@0.5.0/table-filter.js";
+  const input = document.getElementById("table-search-input");
+  input.addEventListener("input", _ => filterTable("search-table", "table-search-input", "visible-items-count"));
+</script>
 
 ## Code
 
@@ -62,7 +66,7 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
       <label for="table-search-input">Search:</label>
     </div>
     <div>
-      <input type="search" id="table-search-input" placeholder="Filter the table..." oninput="filterTable('search-table', 'table-search-input', 'visible-items-count')">
+      <input type="search" id="table-search-input" placeholder="Filter the table...">
     </div>
   </form>
 </search>
@@ -105,7 +109,11 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
   </tbody>
 </table>
 
-<script src="https://cdn.jsdelivr.net/npm/@febog/table-filter@0.1.0/table-filter.js" defer></script>
+<script type="module">
+  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@0.5.0/table-filter.js";
+  const input = document.getElementById("table-search-input");
+  input.addEventListener("input", _ => filterTable("search-table", "table-search-input", "visible-items-count"));
+</script>
 ```
 
 Go back to the [homepage](https://febog.github.io/table-filter/).
