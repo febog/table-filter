@@ -10,21 +10,26 @@ A minimal tool to filter rows in an HTML table. This code takes a straightforwar
 
 ## Installation
 
-This package offers a vanilla JavaScript file that is meant to be run directly in the browser as part of a webpage.
+The package consists of a JavaScript module meant to be run directly in the browser as part of a webpage. It exports a single function, `filterTable`.
 
 For example using jsDelivr:
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/@febog/table-filter@0.1.0/table-filter.js" defer></script>
+```js
+import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@0.5.0/table-filter.js";
 ```
 
 ## Usage
 
-The code offers a function that is meant to be executed whenever the search input changes, for example:
+The `filterTable` function is designed to be executed whenever the search input changes, for example:
 
 ```html
-<input type="search" id="table-search-input" placeholder="Filter the table..."
-  oninput="filterTable('search-table', 'table-search-input', 'visible-items-count')">
+<input type="search" id="table-search-input" placeholder="Filter the table...">
+
+<script type="module">
+  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@0.5.0/table-filter.js";
+  const input = document.getElementById("table-search-input");
+  input.addEventListener("input", _ => filterTable("search-table", "table-search-input", "visible-items-count"));
+</script>
 ```
 
 ### Parameters
