@@ -28,17 +28,18 @@ The `filterTable` function is designed to be executed whenever the search input 
 <script type="module">
   import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@0.5.0/table-filter.js";
   const input = document.getElementById("table-search-input");
-  input.addEventListener("input", _ => filterTable("search-table", "table-search-input", "visible-items-count"));
+  input.addEventListener("input",
+    e => filterTable("search-table", e.target.value, "visible-items-counter"));
 </script>
 ```
 
 ### Parameters
 
-The `filterTable(tableId, searchInputId, counterId)` function requires the ID of 3 elements:
+The `filterTable(tableId, filterString, counterId)` function requires the following parameters:
 
-- `tableId`: Id of the `<table>` element to filter.
-- `searchInputId`: Id of the search `<input>` element containing the query to filter for.
-- `counterId`: Id of an element for displaying the number of visible rows after filtering, for example a `<span>`.
+- `tableId`: Id of the `<table>` element whose rows will be filtered.
+- `filterString`: Terms to filter for.
+- `counterId`: Id of an element to display the number of visible rows after filtering. For example a `<span>`.
 
 ## Working example
 
