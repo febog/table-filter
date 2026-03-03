@@ -14,7 +14,7 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
 </search>
 
 <table id="search-table" style="width: 100%;">
-  <caption>Showing <span id="visible-items-count">5</span> items of 5.</caption>
+  <caption>Showing <span id="visible-items-counter">5</span> items of 5.</caption>
   <thead>
     <tr>
       <th>First</th>
@@ -52,9 +52,10 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
 </table>
 
 <script type="module">
-  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@0.5.0/table-filter.js";
+  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@0.6.0/filter.js";
   const input = document.getElementById("table-search-input");
-  input.addEventListener("input", _ => filterTable("search-table", "table-search-input", "visible-items-count"));
+  input.addEventListener("input",
+    e => filterTable("search-table", e.target.value, "visible-items-counter"));
 </script>
 
 ## Code
@@ -72,7 +73,7 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
 </search>
 
 <table id="search-table">
-  <caption>Showing <span id="visible-items-count">5</span> items of 5.</caption>
+  <caption>Showing <span id="visible-items-counter">5</span> items of 5.</caption>
   <thead>
     <tr>
       <th>First</th>
@@ -110,9 +111,10 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
 </table>
 
 <script type="module">
-  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@0.5.0/table-filter.js";
+  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@0.6.0/filter.js";
   const input = document.getElementById("table-search-input");
-  input.addEventListener("input", _ => filterTable("search-table", "table-search-input", "visible-items-count"));
+  input.addEventListener("input",
+    e => filterTable("search-table", e.target.value, "visible-items-counter"));
 </script>
 ```
 
