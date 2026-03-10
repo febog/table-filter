@@ -60,6 +60,8 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
 
 ## Code
 
+Code used for the demo above:
+
 ```html
 <search>
   <form>
