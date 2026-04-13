@@ -67,3 +67,39 @@ test('Small input, with none found', async ({ page }) => {
   const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
   await expect(hiddenRows).toHaveCount(5);
 });
+
+test('Filter with nothing hidden', async ({ page }) => {
+  await page.goto('/test-stage');
+
+  await page.getByLabel('Search:').fill('2026');
+
+  const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
+  await expect(hiddenRows).toHaveCount(0);
+});
+
+test('Small symbol input, nothing hidden', async ({ page }) => {
+  await page.goto('/test-stage');
+
+  await page.getByLabel('Search:').fill('-');
+
+  const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
+  await expect(hiddenRows).toHaveCount(0);
+});
+
+test('Filter space', async ({ page }) => {
+  await page.goto('/test-stage');
+
+  await page.getByLabel('Search:').fill(' ');
+
+  const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
+  await expect(hiddenRows).toHaveCount(0);
+});
+
+test('Empty filter', async ({ page }) => {
+  await page.goto('/test-stage');
+
+  await page.getByLabel('Search:').fill('');
+
+  const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
+  await expect(hiddenRows).toHaveCount(0);
+});
