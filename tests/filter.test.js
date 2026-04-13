@@ -10,8 +10,7 @@ test('my-table has 5 non-heading rows', async ({ page }) => {
 test('Filter "no" rows', async ({ page }) => {
   await page.goto('/test-stage');
 
-  const filterInput = page.locator('#table-search-input');
-  filterInput.fill('no');
+  await page.getByLabel('Search:').fill('no');
 
   const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
   await expect(hiddenRows).toHaveCount(3);
@@ -20,8 +19,7 @@ test('Filter "no" rows', async ({ page }) => {
 test('Filter "yes" rows', async ({ page }) => {
   await page.goto('/test-stage');
 
-  const filterInput = page.locator('#table-search-input');
-  filterInput.fill('yes');
+  await page.getByLabel('Search:').fill('yes');
 
   const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
   await expect(hiddenRows).toHaveCount(2);
@@ -30,8 +28,7 @@ test('Filter "yes" rows', async ({ page }) => {
 test('Filter by text', async ({ page }) => {
   await page.goto('/test-stage');
 
-  const filterInput = page.locator('#table-search-input');
-  filterInput.fill('tempor');
+  await page.getByLabel('Search:').fill('tempor');
 
   const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
   await expect(hiddenRows).toHaveCount(3);
@@ -40,8 +37,7 @@ test('Filter by text', async ({ page }) => {
 test('Filter by number', async ({ page }) => {
   await page.goto('/test-stage');
 
-  const filterInput = page.locator('#table-search-input');
-  filterInput.fill('08');
+  await page.getByLabel('Search:').fill('08');
 
   const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
   await expect(hiddenRows).toHaveCount(2);
@@ -50,8 +46,7 @@ test('Filter by number', async ({ page }) => {
 test('Filter a single row', async ({ page }) => {
   await page.goto('/test-stage');
 
-  const filterInput = page.locator('#table-search-input');
-  filterInput.fill('Lorem');
+  await page.getByLabel('Search:').fill('Lorem');
 
   const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
   await expect(hiddenRows).toHaveCount(4);
@@ -67,8 +62,7 @@ test('Initial filter', async ({ page }) => {
 test('Small input, with none found', async ({ page }) => {
   await page.goto('/test-stage');
 
-  const filterInput = page.getByLabel('Search:');
-  filterInput.fill('f');
+  await page.getByLabel('Search:').fill('f');
 
   const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
   await expect(hiddenRows).toHaveCount(5);
