@@ -22,5 +22,11 @@ jobs:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Clean install to run tests
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
       - name: Publish to npm
         run: npm publish
