@@ -25,6 +25,9 @@ jobs:
       - name: Clean install to run tests
         run: npm ci
 
+      - name: Download browsers required for Playwright tests
+        run: npx playwright install
+
       - name: Run tests
         run: npm test
 
