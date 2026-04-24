@@ -41,7 +41,7 @@ The `filterTable(tableId, filterString, counterId)` function requires the follow
 
 - `tableId`: Id of the `<table>` element whose rows will be filtered.
 - `filterString`: Terms to filter for.
-- `counterId`: Id of an element to display the number of visible rows after filtering. For example a `<span>`.
+- `counterId`: (Optional) Id of an element to display the number of visible rows after filtering. For example a `<span>`.
 
 ## Working example
 

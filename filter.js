@@ -4,9 +4,9 @@
  * element to display the number of visible rows.
  * @param {string} tableId Id of the `<table>` element whose rows will be filtered.
  * @param {string} filterString Terms to filter for.
- * @param {string} counterId Id of an element to display the number of visible rows after filtering.
+ * @param {string} counterId Id of an element to display the number of visible rows after filtering (optional).
  */
-function filterTable(tableId, filterString, counterId) {
+function filterTable(tableId, filterString, counterId = null) {
   const searchString = filterString.toLowerCase();
   const searchTerms = searchString.replace(/\s+/g, " ").trim().split(" ");
   const table = document.getElementById(tableId);
@@ -35,7 +35,9 @@ function filterTable(tableId, filterString, counterId) {
   }
   // Update the shown items counter
   const counter = document.getElementById(counterId);
-  counter.textContent = visibleRows;
+  if (counter !== null) {
+    counter.textContent = visibleRows;
+  }
 }
 
 function textContainsEveryTerm(text, terms) {
