@@ -52,7 +52,7 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
 </table>
 
 <script type="module">
-  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@1.0.0/filter.js";
+  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@2.0.0/filter.js";
   const input = document.getElementById("table-search-input");
   input.addEventListener("input",
     e => filterTable("search-table", e.target.value, "visible-items-counter"));
@@ -113,7 +113,7 @@ Code used for the demo above:
 </table>
 
 <script type="module">
-  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@1.0.0/filter.js";
+  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@2.0.0/filter.js";
   const input = document.getElementById("table-search-input");
   input.addEventListener("input",
     e => filterTable("search-table", e.target.value, "visible-items-counter"));
