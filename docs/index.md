@@ -20,7 +20,7 @@ import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@2.
 
 ## Usage
 
-The `filterTable` function is designed to be executed whenever the search input changes, for example:
+The `filterTable` function is designed to be executed whenever the search input changes. The code assumes that the table has headers and thus excludes the first row from the filtering. For example:
 
 ```html
 <input type="search" id="table-search-input" placeholder="Filter the table...">

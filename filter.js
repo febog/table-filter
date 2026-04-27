@@ -2,6 +2,7 @@
  * Filters, i.e. hides or shows rows for the given `tableId` table
  * according to the given filter terms and updates the `counterId`
  * element to display the number of visible rows.
+ * Note that the code assumes that the table has headers and thus excludes the first row from the filtering.
  * @param {string} tableId Id of the `<table>` element whose rows will be filtered.
  * @param {string} filterString Terms to filter for.
  * @param {string} counterId Id of an element to display the number of visible rows after filtering (optional).
