@@ -24,9 +24,8 @@ function filterTable(tableId, filterString, counterId = null) {
         cellsText.push(dataCell.textContent);
       }
     }
-    const rowText = cellsText.join(" ");
-    // Search for each filter term
-    if (textContainsEveryTerm(rowText, searchTerms)) {
+    const rowText = cellsText.join(" ").toLowerCase();
+    if (textContainsEverySearchedTerm(rowText, searchTerms)) {
       row.style.display = "";
       visibleRows++;
     } else {
@@ -40,14 +39,8 @@ function filterTable(tableId, filterString, counterId = null) {
   }
 }
 
-function textContainsEveryTerm(text, terms) {
-  for (let i = 0; i < terms.length; i++) {
-    const term = terms[i];
-    if (text.toLowerCase().indexOf(term) < 0) {
-      return false;
-    }
-  }
-  return true;
-}
+const textContainsEverySearchedTerm = (text, terms) => {
+  return terms.every(term => text.includes(term));
+};
 
 export { filterTable };
