@@ -16,15 +16,8 @@ function filterTable(tableId, filterString, counterId = null) {
   for (let i = 1; i < rows.length; i++) {
     const row = rows[i];
     const rowCells = row.getElementsByTagName("td");
-    const cellsText = [];
     // Extract text from cells
-    for (let j = 0; j < rowCells.length; j++) {
-      const dataCell = rowCells[j];
-      if (dataCell) {
-        cellsText.push(dataCell.textContent);
-      }
-    }
-    const rowText = cellsText.join(" ").toLowerCase();
+    const rowText = [...rowCells].map(cell => cell.textContent).join(" ").toLowerCase();
     if (textContainsEverySearchedTerm(rowText, searchTerms)) {
       row.style.display = "";
       visibleRows++;
