@@ -8,8 +8,7 @@
  * @param {string} counterId Id of an element to display the number of visible rows after filtering (optional).
  */
 function filterTable(tableId, filterString, counterId = null) {
-  const searchString = filterString.toLowerCase();
-  const searchTerms = searchString.replace(/\s+/g, " ").trim().split(" ");
+  const searchTerms = filterString.toLowerCase().replace(/\s+/g, " ").trim().split(" ");
   const table = document.getElementById(tableId);
   const rows = table.getElementsByTagName("tr");
   let visibleRows = 0;
