@@ -16,6 +16,15 @@ test('Filter "no" rows', async ({ page }) => {
   await expect(hiddenRows).toHaveCount(3);
 });
 
+test('Visible items counter updated after filtering "no" rows', async ({ page }) => {
+  await page.goto('/test-stage');
+
+  await page.getByLabel('Search:').fill('no');
+
+  const itemsCounter = page.locator('#visible-items-counter');
+  await expect(itemsCounter).toHaveText('2');
+});
+
 test('Filter "yes" rows', async ({ page }) => {
   await page.goto('/test-stage');
 
@@ -23,6 +32,15 @@ test('Filter "yes" rows', async ({ page }) => {
 
   const hiddenRows = page.locator('#filter-table tbody tr[style="display: none;"]');
   await expect(hiddenRows).toHaveCount(2);
+});
+
+test('Visible items counter updated after filtering "yes" rows', async ({ page }) => {
+  await page.goto('/test-stage');
+
+  await page.getByLabel('Search:').fill('yes');
+
+  const itemsCounter = page.locator('#visible-items-counter');
+  await expect(itemsCounter).toHaveText('3');
 });
 
 test('Filter by text', async ({ page }) => {
