@@ -53,6 +53,10 @@ As such, this repository and the process that publishes the package to npm uses 
 
 As for the package itself, I found myself copying and pasting code to implement a simple table search for my small personal projects. Since my use case is small websites I chose to keep the scope of the project small.
 
+## Testing
+
+The package uses [Playwright](https://github.com/microsoft/playwright) for end-to-end testing.
+
 ### Install
 
 ```
