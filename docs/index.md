@@ -31,7 +31,7 @@ The `filterTable` function is designed to be executed whenever the search input 
     from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
   const input = document.getElementById("table-search-input");
   input.addEventListener("input",
-    e => filterTable("search-table", e.target.value, "visible-items-counter"));
+    e => filterTable("search-table", e.target.value, "visible-items-span"));
 </script>
 ```
 

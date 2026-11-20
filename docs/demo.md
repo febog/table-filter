@@ -14,7 +14,7 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
 </search>
 
 <table id="search-table" style="width: 100%;">
-  <caption>Showing <span id="visible-items-counter">5</span> items of 5.</caption>
+  <caption>Showing <span id="visible-items-span">5</span> items of 5.</caption>
   <thead>
     <tr>
       <th>First</th>
@@ -56,7 +56,7 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
     from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
   const input = document.getElementById("table-search-input");
   input.addEventListener("input",
-    e => filterTable("search-table", e.target.value, "visible-items-counter"));
+    e => filterTable("search-table", e.target.value, "visible-items-span"));
 </script>
 
 ## Code
@@ -79,7 +79,7 @@ Code used for the demo above:
 </search>
 
 <table id="search-table">
-  <caption>Showing <span id="visible-items-counter">5</span> items of 5.</caption>
+  <caption>Showing <span id="visible-items-span">5</span> items of 5.</caption>
   <thead>
     <tr>
       <th>First</th>
@@ -121,7 +121,7 @@ Code used for the demo above:
     from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
   const input = document.getElementById("table-search-input");
   input.addEventListener("input",
-    e => filterTable("search-table", e.target.value, "visible-items-counter"));
+    e => filterTable("search-table", e.target.value, "visible-items-span"));
 </script>
 ```
 
