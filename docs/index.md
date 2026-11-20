@@ -19,6 +19,8 @@ import { filterTable }
   from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
 ```
 
+The minified module is also available for download from the releases page for hosting directly.
+
 ## Usage
 
 The `filterTable` function is designed to be executed whenever the search input changes. The code assumes that the table has headers and thus excludes the first row from the filtering. For example:
