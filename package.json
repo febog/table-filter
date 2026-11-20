@@ -17,12 +17,17 @@
   },
   "license": "MIT",
   "author": "Felipe Bojorquez",
-  "browser": "./filter.js",
+  "files": [
+    "./dist/filter.min.js"
+  ],
+  "browser": "./dist/filter.min.js",
   "scripts": {
     "postversion": "git push && git push --tags",
+    "build": "terser ./filter.js --compress --mangle --output .filter.min.js",
     "test": "playwright test"
   },
   "devDependencies": {
-    "@playwright/test": "^1.64.1"
+    "@playwright/test": "^1.64.1",
+    "terser": "^5.51.2"
   }
 }
