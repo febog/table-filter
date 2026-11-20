@@ -18,7 +18,8 @@
   "license": "MIT",
   "author": "Felipe Bojorquez",
   "files": [
-    "./dist/filter.min.js"
+    "./dist/filter.min.js",
+    "./filter.js"
   ],
   "browser": "./dist/filter.min.js",
   "scripts": {
