@@ -16,7 +16,7 @@ For example using jsDelivr:
 
 ```js
 import { filterTable }
-  from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
+  from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.1.0/dist/filter.min.js";
 ```
 
 The minified module is also available for download from the releases page for hosting directly.
@@ -30,7 +30,7 @@ The `filterTable` function is designed to be executed whenever the search input 
 
 <script type="module">
   import { filterTable }
-    from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
+    from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.1.0/dist/filter.min.js";
   const input = document.getElementById("table-search-input");
   input.addEventListener("input",
     e => filterTable("search-table", e.target.value, "visible-items-span"));
