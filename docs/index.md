@@ -15,7 +15,8 @@ The package consists of a JavaScript module meant to be run directly in the brow
 For example using jsDelivr:
 
 ```js
-import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
+import { filterTable }
+  from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
 ```
 
 ## Usage
@@ -26,7 +27,8 @@ The `filterTable` function is designed to be executed whenever the search input 
 <input type="search" id="table-search-input" placeholder="Filter the table...">
 
 <script type="module">
-  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
+  import { filterTable }
+    from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
   const input = document.getElementById("table-search-input");
   input.addEventListener("input",
     e => filterTable("search-table", e.target.value, "visible-items-counter"));

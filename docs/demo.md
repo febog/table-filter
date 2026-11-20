@@ -52,7 +52,8 @@ Demo for [table-filter](https://febog.github.io/table-filter/), a tiny [npm pack
 </table>
 
 <script type="module">
-  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
+  import { filterTable }
+    from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
   const input = document.getElementById("table-search-input");
   input.addEventListener("input",
     e => filterTable("search-table", e.target.value, "visible-items-counter"));
@@ -69,7 +70,10 @@ Code used for the demo above:
       <label for="table-search-input">Search:</label>
     </div>
     <div>
-      <input type="search" id="table-search-input" placeholder="Filter the table...">
+      <input
+        type="search"
+        id="table-search-input"
+        placeholder="Filter the table...">
     </div>
   </form>
 </search>
@@ -113,7 +117,8 @@ Code used for the demo above:
 </table>
 
 <script type="module">
-  import { filterTable } from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
+  import { filterTable }
+    from "https://cdn.jsdelivr.net/npm/@febog/table-filter@3.0.0/dist/filter.min.js";
   const input = document.getElementById("table-search-input");
   input.addEventListener("input",
     e => filterTable("search-table", e.target.value, "visible-items-counter"));
