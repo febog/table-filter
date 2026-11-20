@@ -23,7 +23,7 @@
   "browser": "./dist/filter.min.js",
   "scripts": {
     "postversion": "git push && git push --tags",
-    "build": "terser ./filter.js --compress --mangle --output .filter.min.js",
+    "build": "terser ./filter.js --compress --mangle --output ./dist/filter.min.js",
     "test": "playwright test"
   },
   "devDependencies": {
